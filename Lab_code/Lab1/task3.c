@@ -6,9 +6,8 @@ int char2num(char a){
     return toupper(a)-65;
 }
 
-int main(int argc, char *arg[]){
-
-    // printf("%d\n", strlen(arg[1]);
+int main(int argc, char *argv[]){
+    //receive the first argv to encrypte.
 
     //generate alphabet table
     int i;
@@ -25,19 +24,16 @@ int main(int argc, char *arg[]){
     }
 
     //change to upper case
-    // char *raw[strlen(arg[1])];
-    // strcpy(raw,arg[1]);
-    // printf("%s\n", raw);
-    char rawup[strlen(arg[1])];
-    strcpy(rawup,arg[1]);
+    char rawup[strlen(argv[1])];
+    strcpy(rawup,argv[1]);
     for (i = 0; i < strlen(rawup); i++) {
-        toupper(rawup[i]);
+        rawup[i]=toupper(rawup[i]);
     }
-    printf("%s\n", rawup);
+    // printf("%s\n", rawup);
 
     char *key="Vigenere";
     //encode
-    char encode[strlen(arg[1])];
+    char encode[strlen(argv[1])];
     for (i = 0; i < strlen(rawup); i++) {
         if(isalpha(rawup[i])==0) {
             encode[i]=(char)rawup[i];
@@ -50,7 +46,7 @@ int main(int argc, char *arg[]){
     }
     encode[strlen(rawup)]='\0';
     printf("Key:%s\n", key);
-    printf("%s\n",arg[1]);
+    printf("%s\n",rawup);
     printf("Encrypted: %s\n",encode);
     return 0;
 }
