@@ -3,6 +3,8 @@
 #include <ctype.h>
 
 int main(int argc, char *argv[]){
+    //if have 2 argv, the first is considered as name and the second is considered as ID. 
+    //if not, warn user to intput.
     char raw[200];
     if (argc <3)
     {
@@ -16,7 +18,6 @@ int main(int argc, char *argv[]){
     }
     else{
         sprintf(raw,"Welcome %s(%s) to the C and C++ world",argv[1],argv[2]);
-        // printf("%s\n",raw);
     }
     fprintf(stdout, raw);
     return 0;
