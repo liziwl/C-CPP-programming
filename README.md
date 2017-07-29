@@ -17,7 +17,7 @@ Your program will use Unix-style flags to specify some options. The function to 
 You are asked to implement two flags:
 * -s followed by the separator used (default separator: one space)
 * -i followed by the number of lines to ignore (default: 0). You may have lines to ignore when the first line(s) contains headers, not data. It’s the case in the sample file that is provided.
-###Example:
+### Example:
 If you just want to extract from unidata.csv the state abbreviation (STABBR, 5th field) whether the institution is active (CYACTIVE, 39th field) and the institutional category (INSTCAT, 45th filed), you should enter the command (I’m calling the program extract, you can give it any name you want):
 
 extract -s -i 1 5 39 45 < unidata.csv
