@@ -21,5 +21,5 @@ You are asked to implement two flags:
 If you just want to extract from unidata.csv the state abbreviation (STABBR, 5th field) whether the institution is active (CYACTIVE, 39th field) and the institutional category (INSTCAT, 45th filed), you should enter the command (I’m calling the program extract, you can give it any name you want):
 
 extract -s ',' -i 1 5 39 45 < unidata.csv
-* -s ';' means that the separator is a comma.
+* -s ',' means that the separator is a comma.
 * -i 1 means to ignore (skip) the first line.
