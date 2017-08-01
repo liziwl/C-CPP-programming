@@ -84,21 +84,24 @@ int main(int argc, char *argv[]) {
         if (cursor == '"') {
             quotes = quotes + 1;
             quotes = quotes % 2;
+            if (isTheCol(spcount, exact, size) == 0) {// if the specific column
+                fputc(cursor, foutp);
+            }
             continue;
         }
         if (cursor == separator) {
             if (0 == quotes) {
-                if (isTheCol(spcount++, exact, size) == 0) {// find the specific column
+                if (isTheCol(spcount++, exact, size) == 0) {// if the specific column
                     fputc(cursor, foutp);
                 }
             } else {
-                if (isTheCol(spcount, exact, size) == 0) {// find the specific column
+                if (isTheCol(spcount, exact, size) == 0) {// if the specific column
                     fputc(cursor, foutp);
                 }
             }
             continue;
         }
-        if (isTheCol(spcount, exact, size) == 0) {// find the specific column
+        if (isTheCol(spcount, exact, size) == 0) {// if the specific column
             fputc(cursor, foutp);
             continue;
         }
