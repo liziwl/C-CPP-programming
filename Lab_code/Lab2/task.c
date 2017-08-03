@@ -53,15 +53,15 @@ int main(int argc, char *argv[]) {
         // printf("argv%d ", atoi(argv[i]));
     }
 
-    time_t tt;
-    tt = time(NULL);
-    char fileName[32];
-    strftime(fileName, sizeof(fileName), "%Y%m%d%H%M%S_out.csv", localtime(&tt));
+    // time_t tt;
+    // tt = time(NULL);
+    // char fileName[32];
+    // strftime(fileName, sizeof(fileName), "%Y%m%d%H%M%S_out.csv", localtime(&tt));
     //format the output fileName
-    FILE *foutp = fopen(fileName, "w+");
-    if (foutp == NULL) {
-        return -1;
-    }
+    // FILE *foutp = fopen(fileName, "w+");
+    // if (foutp == NULL) {
+    //     return -1;
+    // }
 
     // skip the first lines
     char cursor;// current cursor
@@ -77,7 +77,8 @@ int main(int argc, char *argv[]) {
             continue;
         }
         if (cursor == '\n') {
-            fputc(cursor, foutp);
+            // fputc(cursor, foutp);
+            putchar(cursor);
             spcount = 1;
             continue;
         }
@@ -85,30 +86,34 @@ int main(int argc, char *argv[]) {
             quotes = quotes + 1;
             quotes = quotes % 2;
             if (isTheCol(spcount, exact, size) == 0) {// if the specific column
-                fputc(cursor, foutp);
+                // fputc(cursor, foutp);
+                putchar(cursor);
             }
             continue;
         }
         if (cursor == separator) {
             if (0 == quotes) {
                 if (isTheCol(spcount++, exact, size) == 0) {// if the specific column
-                    fputc(cursor, foutp);
+                    // fputc(cursor, foutp);
+                    putchar(cursor);
                 }
             } else {
                 if (isTheCol(spcount, exact, size) == 0) {// if the specific column
-                    fputc(cursor, foutp);
+                    // fputc(cursor, foutp);
+                    putchar(cursor);
                 }
             }
             continue;
         }
         if (isTheCol(spcount, exact, size) == 0) {// if the specific column
-            fputc(cursor, foutp);
+            // fputc(cursor, foutp);
+            putchar(cursor);
             continue;
         }
     }
-    fclose(foutp);
+    // fclose(foutp);
     free(exact);
-    printf("Output fileName: %s\n", fileName);
+    // printf("Output fileName: %s\n", fileName);
     exit(EXIT_SUCCESS);
 }
 
