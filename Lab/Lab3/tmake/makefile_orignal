@@ -1,0 +1,18 @@
+CC=gcc
+CFLAGS=-Wall
+INC = -I ./xname -I ./yname
+all : lab3_tmake
+lab3_tmake : lab3_main.o ./xname/x.o  ./yname/y.o  
+	gcc -o lab3_tmake ./xname/x.o ./yname/y.o lab3_main.o
+
+x.o : x.c 
+	gcc -c x.c
+y.o : y.c 
+	gcc -c y.c
+lab3_main.o :lab3_main.c
+	gcc -c lab3_main.c
+
+.PHONY : clean
+clean : 
+	find . -name "*.o"  | xargs rm -f
+	find . -name "*.exe" | xargs rm -f
