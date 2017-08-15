@@ -23,3 +23,14 @@ If you just want to extract from unidata.csv the state abbreviation (STABBR, 5th
 extract -s ',' -i 1 5 39 45 < unidata.csv
 * -s ',' means that the separator is a comma.
 * -i 1 means to ignore (skip) the first line.
+
+## Lab3
+
+## Lab4
+You are provided with a .hpp file to complete, a .cpp file to complete, and a main.cpp that you mustn't modify and is exactly what will be used to test your code. Additionally, you get a makefile. For grading, we'll compare the output with your classes to a known result.
+
+The class that is implemented is a ChineseYear class. You are asked to write constructors, and functions and methods to write them to a stream, and to add to them a number of years. The detail is in comments in the code that is supplied.
+
+By default, it will implicitly be the current 12-year cycle.
+
+An information that will be useful: 1900 (remember that the field tm_year in a struct tm is the year minus 1900) was a year of the Rat, and therefore the beginning of a 12-year cycle. It can be helpful for finding out which animal corresponds to a year.
