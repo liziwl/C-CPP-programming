@@ -1,4 +1,0 @@
-
-c1/11.pdf	c1/c2/22.pdf	c1/c2/23.pdf	c1/c2/c3/33.pdf	/LAB3_SUBJECT.pdf	
-c1/no_space_sample	/no_space_sample	
-c1/minus_one	/minus_one	
