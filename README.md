@@ -1,5 +1,7 @@
 # C/C++programming
-Course codes and material, Summer 2017 in SUSTech
+Course codes and material, Summer 2017 in SUSTech.
+
+Provided by [Stéphane Faroult](http://cse.sustc.edu.cn/cn/people/view/people_id/58/sort_id/9/pid/)
 
 ## Lab1
 1.	To get familiar with the environment write a very simple program that reads your name and Student ID from the keyboard, and outputs “Welcome XXX to the C and C++ world” on the screen. XXX is your name and Student ID. ( 2 points)
@@ -25,7 +27,9 @@ extract -s ',' -i 1 5 39 45 < unidata.csv
 * -i 1 means to ignore (skip) the first line.
 
 ## Lab3
+The purpose of this program is to take a directory name as argument, to search this directory and its subdirectories, and when two identical files are found to display the two names, including directories, of identical files. The tool will only display the pairs of file names, the program user will then use the information to decide what to do.
 
+More detail, please read LAB3_SUBJECT.pdf
 ## Lab4
 You are provided with a .hpp file to complete, a .cpp file to complete, and a main.cpp that you mustn't modify and is exactly what will be used to test your code. Additionally, you get a makefile. For grading, we'll compare the output with your classes to a known result.
 
