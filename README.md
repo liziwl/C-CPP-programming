@@ -7,6 +7,8 @@ Provided by [Stéphane Faroult](http://cse.sustc.edu.cn/cn/people/view/people_id
 ## Lecture notes
 Lecture 1-7 is talking about C, and Lecture 8-14 is talking about C++.
 
+All the Lecture note copyrights reserved by [Stéphane Faroult](http://cse.sustc.edu.cn/cn/people/view/people_id/58/sort_id/9/pid/).
+
 --------------
 ## Labs
 ### Lab1 -- Hello world and Vigenère cipher
