@@ -1,6 +1,7 @@
 code/
 # Prerequisites
 *.d
+todo.md
 
 # Object files
 *.o

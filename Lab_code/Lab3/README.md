@@ -1,4 +1,5 @@
 # Description
+------------------------------------------
 We use 2 method to implement the program.
 Data structure:
 * for single file, we use struct to store path, name, size, and some other info.
